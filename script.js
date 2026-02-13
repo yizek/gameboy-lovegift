@@ -225,9 +225,9 @@ function startTypewriter() {
     
     const fullMessage = `Oi, amor
 
-Feliz 6 meses!
+Feliz 7 meses!
 
-Você é incrível, cada dia que passa eu tenho mais vontade de ter você, esses últimos 6 meses comprovam que eu te quero cada vez mais.
+Você é incrível, cada dia que passa eu tenho mais vontade de ter você, esses últimos 7 meses comprovam que eu te quero cada vez mais.
 
 Minha vida com a sua presença se tornou e tá sendo incrivel, isso é inegável
 
@@ -270,9 +270,9 @@ function skipTypewriter() {
         if (messageContent) {
             const fullMessage = `Oi, amor
 
-Feliz 6 meses!
+Feliz 7 meses!
 
-Você é incrível, cada dia que passa eu tenho mais vontade de ter você, esses últimos 6 meses comprovam que eu te quero cada vez mais.
+Você é incrível, cada dia que passa eu tenho mais vontade de ter você, esses últimos 7 meses comprovam que eu te quero cada vez mais.
 
 Minha vida com a sua presença se tornou e tá sendo incrivel, isso é inegável
 
