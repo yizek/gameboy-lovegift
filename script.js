@@ -631,7 +631,7 @@ function loadSpotifyPlaylist(playlistNumber) {
     description: ''
 },
 3: {
-    embedUrl: 'https://open.spotify.com/embed/playlist/6n2adhbOZY5pHCEP8kZDch?si=45db1f95e2b54db4',
+    embedUrl: 'https://open.spotify.com/embed/playlist/6n2adhbOZY5pHCEP8kZDch',
     name: '',
     description: ''
 }
