@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente de 6 meses</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameboy-container">
+        <!-- Tela de Carregamento -->
+        <div id="loading-screen" class="screen active">
+            <div class="gameboy-screen">
+                <div class="screen-content">
+                    <h1 class="title">PRESENTE PRA MOMOLADA</h1>
+                    <div class="loading-text">&gt; INICANDO..._</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                        <div class="progress-text">38%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela Principal -->
+        <div id="main-screen" class="screen">
+            <div class="gameboy-body">
+                <div class="gameboy-header">
+                    <div class="power-indicator">
+                        <span class="power-dot"></span>
+                        <span class="power-text">LIGADO</span>
+                    </div>
+                    <div class="brand-text">GAME-BOY</div>
+                </div>
+                
+                <div class="gameboy-screen">
+                    <div class="screen-content">
+                        <h1 class="birthday-title">Feliz 6 meses!</h1>
+                        <div class="start-text">Aperte o botão START</div>
+                        <div class="screen-info">
+                            <span class="dot-matrix">QUERO UM BEIJO DEPOIS RSRSRS</span>
+                            <span class="battery">
+                                <span class="battery-dot"></span>
+                                BATERIA
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-buttons">
+                    <button class="menu-btn message-btn" data-page="message">CARTINHA</button>
+                    <button class="menu-btn gallery-btn" data-page="gallery">GALERIA</button>
+                    <button class="menu-btn music-btn" data-page="music">MUSICA</button>
+                    <button class="menu-btn tetris-btn" data-page="tetris">TETRIS</button>
+                </div>
+
+                <div class="controls">
+                    <div class="dpad">
+                        <div class="dpad-center">
+                            <div class="dpad-up">↑</div>
+                            <div class="dpad-left">←</div>
+                            <div class="dpad-right">→</div>
+                            <div class="dpad-down">↓</div>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn b-btn">B</button>
+                        <button class="action-btn a-btn">A</button>
+                    </div>
+                </div>
+
+                <div class="bottom-controls">
+                    <button class="control-btn select-btn">SELECT</button>
+                    <button class="control-btn start-btn">START</button>
+                </div>
+
+                <div class="speaker-grille"></div>
+            </div>
+        </div>
+
+        <!-- Cartinha Screen -->
+        <div id="message-screen" class="screen">
+            <div class="page-container">
+                <div class="page-screen">
+                    <div class="page-header">Cartinha</div>
+                        <!-- Content will be populated by JavaScript -->
+                </div>
+                <div class="page-controls">
+                    <button class="page-btn back-btn" data-page="main">VOLTAR</button>
+                    <button class="page-btn continue-btn">CONTINUAR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Screen -->
+        <div id="gallery-screen" class="screen">
+            <div class="page-container">
+                <div class="page-screen">
+                    <div class="page-header">Galeria</div>
+                    <div class="gallery-content">
+                        <!-- Content will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="page-controls">
+                    <button class="page-btn back-btn" data-page="main">VOLTAR</button>
+                    <button class="page-btn continue-btn">CONTINUAR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Music Screen -->
+        <div id="music-screen" class="screen">
+            <div class="page-container">
+                <div class="page-screen">
+                    <div class="page-header">Musica</div>
+                    <div class="music-content">
+                        <!-- Content will be populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="page-controls">
+                    <button class="page-btn back-btn" data-page="main">VOLTAR</button>
+                    <button class="page-btn continue-btn">CONTINUAR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tetris Screen -->
+        <div id="tetris-screen" class="screen">
+            <div class="page-container">
+                <div class="page-screen">
+                    <div class="tetris-header">
+                        <div class="tetris-title">Tetris</div>
+                        <div class="tetris-stats">
+                            <div class="stat">Pontos: <span id="score">0</span></div>
+                            <div class="stat">Nível: <span id="level">1</span></div>
+                            <div class="stat">Linhas: <span id="lines">0</span></div>
+                        </div>
+                    </div>
+                    <div class="tetris-game">
+                        <canvas id="tetris-canvas" width="300" height="400"></canvas>
+                    </div>
+                    <div class="tetris-controls">
+                        <button class="tetris-btn" id="left-btn">◀</button>
+                        <button class="tetris-btn" id="rotate-btn">GIRAR</button>
+                        <button class="tetris-btn" id="right-btn">▶</button>
+                    </div>
+                </div>
+                <div class="page-controls">
+                    <button class="page-btn back-btn" data-page="main">VOLTAR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div id="game-over-modal" class="modal">
+            <div class="modal-content">
+                <div class="game-over-text">GAME OVER</div>
+                <button class="modal-btn" id="confirm-btn">CONFIRMAR</button>
+            </div>
+        </div>
+
+        <!-- Mensagem Final Modal -->
+        <div id="final-message-modal" class="modal">
+            <div class="modal-content">
+                <div class="final-message-title">PERDEU!</div>
+                <div class="final-message-text">
+                    <p>tenta denovo,</p>
+                    <p>se voce conseguir bastante ponto</p>
+                    <p>eu te dou um doce, rs</p>
+                    <p>^_^</p>
+                    <p class="love-text">EU TE AMO &lt;3</p>
+                </div>
+                <button class="modal-btn" id="ok-btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
